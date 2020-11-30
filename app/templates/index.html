@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+<title>Panoratich</title>  
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="/static/css/style.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="font-family: 'Pacifico', cursive; font-size:25px;">Panoratich</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/" style="font-family: 'Poppins', sans-serif; font-size:18px;">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about" style="font-family: 'Poppins', sans-serif; font-size:18px;">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#stitch" style="font-family: 'Poppins', sans-serif; font-size:18px;">Stitch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#team" style="font-family: 'Poppins', sans-serif; font-size:18px;">Team</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container-fluid first">
+    <div class="container sub-first">
+      <label class="text-uppercase">Meet the ai powered<br><span class="text-uppercase">Image stitching
+          tool</span></label>
+      <br>
+      <p>Upload your images having some common keypoints in them and get the complete panoramic image stitched.</p>
+      <button class="btn">Try Now</button>
+    </div>
+  </div>
+  <div class="container-fluid second text-center" id="about">
+    <label style="color:whitesmoke;">About Us</label>
+    <p>Panoratich is an online tool used to stitch your images having some common keypoints. The tool is based on
+      Artificial Intelligence which will
+      detect the keypoints in your images irrespective of the order in which you have submitted the files. All the images
+      must be in same file extension and should have good lighted background. The results produced will be high
+      resolutionized wide angle panoramic image.
+    </p>
+  </div>
+<!-- partial:index.partial.html -->
+<div class="wrapper text-center" id="stitch">
+  <label>Upload Your Files Here.</label><br>
+  <p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+
+
+  <span>Attach all the images at once and Click Upload.</span>
+  <form action="/" method="post" enctype="multipart/form-data"
+  <div class="drop">
+    <div class="cont">
+      <i class="fa fa-cloud-upload"></i>
+      <div class="tit">
+        Drag & Drop
+      </div>
+      <div class="desc">
+        your files to Assets, or 
+      </div>
+      <div class="browse">
+        click here to browse
+      </div>
+    </div>
+    <output id="list"></output><input id="files" type="file" multiple="" name="file[]" required />
+  </div>
+  <button class="btn" >Stitch Now!</button>
+</div>
+</form>
+{% if filename %}
+	<div>
+		<img src="{{ url_for('static', filename=filename) }}">
+		<div class="container" align="left">
+		<a href="/download/" target="blank"><button class='btn btn-default'>Download!</button></a>
+   </div>
+		
+	</div>
+{% endif %}
+<div class="container-fluid team text-center" id="team">
+  <label class="text-uppercase" style="color:whitesmoke;">Meet the team</label>
+  <div class="row">
+    <div class="col-lg-3 col-xl-3 col-sm-6 col-md-6" style="color:whitesmoke; font-size:20px;">
+      <img src="/static/images/rishu.jpeg" alt="" height=150px width=150px><br>
+      <span style="margin-top:2vh">Rishu Raj</span>
+      <p>VTU 10605</p></div>
+    <div class="col-lg-3 col-xl-3 col-sm-6 col-md-6" style="color:whitesmoke; font-size:20px;">
+      <img src="/static/images/yadav.png" alt="" height=150px width=150px><br>
+      <span style="margin-top:2vh">Shubham Yadav</span>
+      <p>VTU </p>
+    </div><div class="col-lg-3 col-xl-3 col-sm-6 col-md-6" style="color:whitesmoke; font-size:20px;">
+      <img src="/static/images/yogesh.jpeg" alt="" height=150px width=150px><br>
+      <span style="margin-top:2vh">K Yogesh</span>
+      <p>VTU </p>
+    </div><div class="col-lg-3 col-xl-3 col-sm-6 col-md-6" style="color:whitesmoke; font-size:20px;">
+      <img src="/static/images/satish.png" alt="" height=150px width=150px><br>
+      <span style="margin-top:2vh">Satheesh</span>
+      <p>VTU </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid footer">
+  <label>Panoratich</label><br>
+  <span>Made by students of Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology</span>
+  <button class="btn float-right">Send Us</button><input type="text" placeholder="Drop us a feedback" class="float-right">
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="/static/js/script.js"></script>
+
+</body>
+</html>

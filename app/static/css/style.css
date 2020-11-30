@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  background: white;
+  color: #323a44;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+.first {
+  background: url('/static/images/Header-Panorich.png');
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.first .sub-first {
+  padding-left: 32vw;
+  padding-top: 40vh;
+}
+.first .sub-first label {
+  text-align: left;
+  justify-content: right;
+  font-weight: 800;
+  font-size: 50px;
+  font-kerning: normal;
+  font-family: "Poppins", sans-serif;
+  line-height: 50px;
+  color: rgb(0, 111, 181);
+}
+.first label span {
+  font-weight: 300;
+  /* font-family: "Playfair Display", serif; */
+  font-kerning: auto;
+}
+.first .btn {
+  font-size: 25px;
+  border-radius: 30px;
+  color: white;
+  border: solid 2px rgb(0, 111, 181);
+  padding: 8px 40px;
+  background: rgb(0, 111, 181);
+}
+.first .btn:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: rgb(0, 111, 181);
+  background-color: white;
+}
+.first p {
+  font-family: "Poppins", sans-serif;
+  width: 30vw;
+  font-size: 1rem;
+  color: rgb(4, 13, 31);
+}
+.second {
+  background-color: rgb(0, 111, 181);
+  font-family: "Poppins", sans-serif;
+}
+.second p {
+  color: whitesmoke;
+  padding: 20vh 17.5vw;
+  font-size: 1.25rem;
+  padding-top: 10vh;
+}
+.example {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.drop {
+  width: 85vw;
+  height: 50vh;
+  border: 3px dashed #dadfe3;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  background: white;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin: auto;
+  margin-top: 2vh;
+  /*&:hover
+   * cursor: pointer
+   * background: #f5f5f5 */
+}
+.drop .cont {
+  width: 500px;
+  height: 170px;
+  color: #8e99a5;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  margin: auto;
+}
+.drop .cont i {
+  font-size: 400%;
+  color: #8e99a5;
+  position: relative;
+}
+.drop .cont .tit {
+  font-size: 400%;
+  text-transform: uppercase;
+}
+.drop .cont .desc {
+  color: #a4aebb;
+}
+.drop .cont .browse {
+  margin: 10px 25%;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: #09f;
+}
+.drop input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: red;
+  opacity: 0;
+  margin: auto;
+}
+
+#list {
+  width: 100%;
+  text-align: left;
+}
+#list .thumb {
+  height: 75px;
+  border: 1px solid #323a44;
+  margin: 10px 5px 0 0;
+}
+.wrapper label,
+.second label,
+.team label {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(0, 111, 181);
+  margin-top: 5vh;
+}
+.wrapper span {
+  font-size: 25px;
+  font-weight: 200;
+  color: rgb(4, 13, 31);
+  margin-top: 1vh;
+}
+.wrapper .btn {
+  margin-top: 3vh;
+  font-size: 20px;
+  border-radius: 30px;
+  color: white;
+  border: solid 2px rgb(0, 111, 181);
+  padding: 8px 40px;
+  background: rgb(0, 111, 181);
+}
+.wrapper .btn:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: rgb(0, 111, 181);
+  background-color: white;
+}
+.team {
+  background: rgb(0, 111, 181);
+}
+.row {
+  padding: 5vh 10vw;
+}
+.footer {
+  padding: 10vh 10vw;
+}
+.footer label {
+  font-size: 30px;
+  color: rgb(0, 111, 181);
+  font-family: "Pacifico", cursive;
+}
+.footer .btn {
+  font-size: 18px;
+
+  color: white;
+  border: solid 2px rgb(0, 111, 181);
+  padding: 5px 20px;
+  background: rgb(0, 111, 181);
+}
+.footer .btn:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: rgb(0, 111, 181);
+  background-color: white;
+}
+.footer input {
+  height: 42px;
+}
+@media (max-width: 600px) {
+  .first .sub-first {
+    padding-left: 2vw !important;
+    padding-top: 8vh !important;
+  }
+}
